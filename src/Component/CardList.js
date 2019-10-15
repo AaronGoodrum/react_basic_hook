@@ -12,7 +12,9 @@ class CardList extends React.Component {
   		{name: "Sebastian Markbåge", avatar_url: "https://avatars2.githubusercontent.com/u/63648?v=4", company: "Facebook"},
 	];
     return (
-    <Card testData={testData} />
+      testData.map(
+        testData => 
+        <Card key={testData.name} {...testData} />)
     )
   }
 }
