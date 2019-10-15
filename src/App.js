@@ -1,5 +1,6 @@
 import React from 'react';
 import './App.css';
+import Card from './Component/Card'
 
 function App(props) {
   return (
@@ -7,6 +8,7 @@ function App(props) {
       <header className="App-header">
         {props.title}
       </header>
+      <Card />
     </div>
   );
 }
