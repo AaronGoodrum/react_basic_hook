@@ -1,13 +1,13 @@
 import React from "react";
 import "./App.css";
-import Card from "./Component/Card";
+import CardList from "./Component/CardList";
 
 class App extends React.Component {
   render() {
     return (
       <div className="App">
         <header className="App-header">{this.props.title}</header>
-        <Card />
+        <CardList />
       </div>
     );
   }
