@@ -1,16 +1,20 @@
 import React from 'react';
 import Card from "./Card";
 
-// Will need a List of card coming from data
-
 class CardList extends React.Component {
-  
+
+  // handleDelete = (profile) => {
+  //   console.log('Cardlist', profile)
+  // }
   render() {
     return (
      <div> 
      {this.props.profiles.map(
-        profile => 
-        <Card key={profile.name} {...profile} />)
+        profile => (
+          <React.Fragment key={profile.id}>
+          <Card {...profile} onDelete={this.props.handleDelete}/>
+          </React.Fragment>
+        ))
     }
     </div>
     )

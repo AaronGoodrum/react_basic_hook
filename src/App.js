@@ -20,18 +20,18 @@ class App extends React.Component {
     }))
   }
 
-  removeProfile = (profileData) => {
-    this.setState(prevState => ({
-      profiles: [...prevState.profiles, profileData]
-    }))
-  }
+  handleDelete = (profile) => {
+    const newProfiles = this.state.profiles.filter(item => item.id !== profile.id)
+    this.setState({profiles: newProfiles})
+    }
+  
 
   render() {
     return (
       <div className="App">
         <header className="App-header">{this.props.title}</header>
         <FormInput onSubmit={this.addNewProfile}/>
-        <CardList profiles={this.state.profiles}/>
+        <CardList profiles={this.state.profiles} handleDelete={this.handleDelete}/>
       </div>
     );
   }
