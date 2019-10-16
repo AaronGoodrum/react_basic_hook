@@ -8,7 +8,7 @@ class Form extends React.Component {
     event.preventDefault()
     try {
     const resp = await 
-      axios.get(`https://api.github.com/user/${this.state.userName}`)
+      axios.get(`https://api.github.com/users/${this.state.userName}`)
       console.log(resp)
     }
     catch (error){
