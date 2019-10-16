@@ -20,6 +20,12 @@ class App extends React.Component {
     }))
   }
 
+  removeProfile = (profileData) => {
+    this.setState(prevState => ({
+      profiles: [...prevState.profiles, profileData]
+    }))
+  }
+
   render() {
     return (
       <div className="App">

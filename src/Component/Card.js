@@ -1,4 +1,5 @@
 import React from 'react';
+import DeleteButton from './DeleteButton'
 
 class Card extends React.Component {
 
@@ -11,6 +12,7 @@ class Card extends React.Component {
           <div className="name"> {profile.name}</div>
           <div className="company">{profile.company}</div>
         </div>
+        <DeleteButton onClick={this.removeProfile}/>
       </div>
     )
   }
