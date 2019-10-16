@@ -15,7 +15,12 @@ class App extends React.Component {
   }
 
   addNewProfile = (profileData) => {
-    console.log('APP', profileData)
+    console.log('APP', profileData, this.state.profiles)
+
+    this.setState(prevState => ({
+      profiles: [...prevState.profiles, profileData]
+    }))
+    console.log('APP-update', this.state.profiles)
   }
 
   render() {
