@@ -1,7 +1,7 @@
 import React from "react";
 import "./App.css";
 import CardList from "./Component/CardList";
-import Form from "./Component/Form"
+import FormInput from "./Component/Form"
 
 // const testData = [
 //   {name: "Dan Abramov", avatar_url: "https://avatars0.githubusercontent.com/u/810438?v=4", company: "@facebook"},
@@ -24,7 +24,7 @@ class App extends React.Component {
     return (
       <div className="App">
         <header className="App-header">{this.props.title}</header>
-        <Form onSubmit={this.addNewProfile}/>
+        <FormInput onSubmit={this.addNewProfile}/>
         <CardList profiles={this.state.profiles}/>
       </div>
     );

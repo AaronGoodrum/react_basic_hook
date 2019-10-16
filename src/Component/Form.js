@@ -1,7 +1,8 @@
 import React from "react";
+import {Button, Form, Input, Container, Row, Col} from 'reactstrap';
 const axios = require('axios')
 
-class Form extends React.Component {
+class FormInput extends React.Component {
   state = {userName:''}
 
   handleSubmit = async (event) => {
@@ -18,8 +19,11 @@ class Form extends React.Component {
   
   render() {
     return (
-      <form onSubmit={this.handleSubmit}>
-      <input
+      <Form onSubmit={this.handleSubmit}>
+      <Container>
+      <Row>
+      <Col>
+      <Input
         type="text" placeholder="Github search" 
         onChange={
           event => this.setState({
@@ -27,11 +31,16 @@ class Form extends React.Component {
           })
         } 
         required>
-      </input>
-      <button>Add Card</button>
-      </form >
+      </Input>
+      </Col>
+      <Col>
+      <Button color="success" block size="md">Submit Card</Button>
+      </Col>
+      </Row>
+      </Container>
+      </Form >
     );
   }
 }
 
-export default Form;
+export default FormInput;
