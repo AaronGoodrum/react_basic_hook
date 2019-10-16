@@ -9,7 +9,7 @@ class Form extends React.Component {
     try {
     const resp = await 
       axios.get(`https://api.github.com/users/${this.state.userName}`)
-      console.log(resp)
+      this.props.onSubmit(resp.data)
     }
     catch (error){
         console.log(error)
